@@ -24,7 +24,7 @@ pollutantmean <- function(directory, pollutant, id = 1:332) {
                 for (i in id) {
                         if (i < 10) {
                                 fileN <- paste("00",i,sep="")
-                        } else if (i < 99){
+                        } else if (i < 100){
                                 fileN <- paste("0",i,sep="")
                         } else {
                                 fileN <- paste("",i,sep="")
