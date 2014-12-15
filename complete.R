@@ -12,8 +12,8 @@ complete <- function(directory, id = 1:332) {
         ## number of complete cases
         #result <- data.frame( id1 = integer(0), nobs = numeric(0))
         row <- 1
-        idid <- "NA"
-        nobs <-"NA"
+        idid <- 0
+        nobs <- 0
         for (i in id) {
                 if (i < 10) {
                         fileN <- paste("00",i,sep="")
