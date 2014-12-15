@@ -22,7 +22,7 @@ corr <- function(directory, threshold = 0) {
                 path <- paste("C:\\Users\\HB17671\\Downloads\\Code\\R\\",directory,"\\",fileN,".csv",sep="")
                 x <- read.csv(path)
                 
-                result <- c(result,signif(cor(x$nitrate,x$sulfate,use="complete.obs"),digits = 4))
+                result <- c(result,round(cor(x$nitrate,x$sulfate,use="complete.obs",method = "pearson"),digits = 5))
         }
         result <- result[-c(1)]
         result
