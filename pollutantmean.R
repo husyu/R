@@ -38,6 +38,7 @@ pollutantmean <- function(directory, pollutant, id = 1:332) {
                 y <- x[,pollutant]
                 takeout <- is.na(y)
                 ## View(y[!takeout])
-                return (format(mean(y[!takeout]),digits=4))
+                #return (format(mean(y[!takeout]),digits=4))
+                return (round(mean(y[!takeout]),digits=3))
         }
 }
