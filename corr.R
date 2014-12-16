@@ -10,7 +10,7 @@ corr <- function(directory, threshold = 0) {
         ## Return a numeric vector of correlations
         c.nobs <- complete(directory)
         corr.list <- subset(c.nobs,nobs > threshold)
-        result <- 0
+        result <- 0.001
         for (i in corr.list$id) {
                 if (i < 10) {
                         fileN <- paste("00",i,sep="")
@@ -19,10 +19,11 @@ corr <- function(directory, threshold = 0) {
                 } else {
                         fileN <- paste("",i,sep="")
                 }
-                path <- paste("C:\\Users\\HB17671\\Downloads\\Code\\R\\",directory,"\\",fileN,".csv",sep="")
+                path <- paste("~/R_code/",directory,"/",fileN,".csv",sep="")
+                #path <- paste("C:\\Users\\HB17671\\Downloads\\Code\\R\\",directory,"\\",fileN,".csv",sep="")
                 x <- read.csv(path)
                 
-                result <- c(result,round(cor(x$nitrate,x$sulfate,use="complete.obs",method = "pearson"),digits = 5))
+                result <- c(result,cor(x$nitrate,x$sulfate,use="complete.obs",method = "pearson"))
         }
         result <- result[-c(1)]
         result

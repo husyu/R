@@ -22,7 +22,8 @@ complete <- function(directory, id = 1:332) {
                 } else {
                         fileN <- paste("",i,sep="")
                 }
-                path <- paste("C:\\Users\\HB17671\\Downloads\\Code\\R\\",directory,"\\",fileN,".csv",sep="")
+                path <- paste("~/R_code/",directory,"/",fileN,".csv",sep="")
+                #path <- paste("C:\\Users\\HB17671\\Downloads\\Code\\R\\",directory,"\\",fileN,".csv",sep="")
                 x <- read.csv(path)
 
                 #result$id[row] <- i
