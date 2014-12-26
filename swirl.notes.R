@@ -7,3 +7,20 @@ rep(c(0, 1, 2), times = 10)
 rep(c(0, 1, 2), each = 10)
 my_char <- c("My", "name", "is")
 paste(my_char, collapse = " ")
+head(x)
+lapply
+sapply
+as.character(cls_list)
+unique
+POSIXct
+POSIXlt
+unclass
+as.Date
+Sys.date
+Sys.time
+weekdays
+months
+quarters
+t3 <- "October 17, 1986 08:24"
+as.POSIXlt()  == strptime(t3, "%B %d, %Y %H:%M")
+difftime()
